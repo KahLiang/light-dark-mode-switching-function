@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<header></header>
+<body>
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- CSS -->
+    <link id="active-stylesheet" rel="stylesheet" href="light.css">
+
+    <script type="text/javascript" type="text/css" src="toggle.js"></script>
+
+    <main id="main">
+        <p> First Page - <a href="second.html">Go to Second Page</a></p>
+        <label class="switch">
+          <button class="button" id="light-dark-switch">Switch Mode</button>
+        </label>
+    </main>
+
+</body>
+</html>
+
+<script>
+
+$(document).ready( function() {
+  var buttonEventClick = $("#light-dark-switch");
+  var onSheet = $("#active-stylesheet");
+
+  if (localStorage.getItem("lastActiveSheet")) {
+      onSheet.attr("href", localStorage.getItem("lastActiveSheet"));
+
+      // show current style sheet in console
+      console.log('LocalStorage:', localStorage)
+  }
+
+  $(buttonEventClick).on('click', custom_switchStyle);
+  
+  function custom_switchStyle(){
+    
+    // checking href css style
+    var onSheetHref = onSheet.attr('href');
+   
+    if (onSheetHref != "dark.css"){
+
+      var selectedSheet = "dark.css";
+
+      onSheet.attr("href", selectedSheet);
+      localStorage.setItem("lastActiveSheet", selectedSheet);
+
+    }
+    else if (onSheetHref != "light.css"){
+      var selectedSheet = "light.css";
+
+      onSheet.attr("href", selectedSheet);
+      localStorage.setItem("lastActiveSheet", selectedSheet);
+    }
+
+  }
+ });
+</script>
+
+
+
+
+
+
