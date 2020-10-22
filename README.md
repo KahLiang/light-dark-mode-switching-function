@@ -7,5 +7,5 @@ will using **localStorage** Property to save the user perspective in their web b
 
 Feel free to download and have a try!:D
 
-# Demo
-![](demo.gif)
+# Sample Output
+![](sample.jpg)
