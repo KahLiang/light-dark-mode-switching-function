@@ -4,5 +4,8 @@ a link or anchor tag.
 
 This method can also be used to get the value of any attribute. Feel free to download and have a try!:D
 
+# Light Mode
+![](light.jpg)
 
-
+# DarK Mode
+![](dark.jpg)
